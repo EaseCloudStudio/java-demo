@@ -16,7 +16,7 @@ jobs:
             echo "Deployed successfully"
           
   docker:
-    uses: EaseCloudStudio/java-demo.git/.github/workflows/buid_container.yaml@main
+    uses: EaseCloudStudio/java-demo/.github/workflows/buid_container.yaml@main
     with:
       aws-region: 'us-east-2'
       image: 'java-demo'
