@@ -1,6 +1,11 @@
 name: Deploy Java Application
 
 on:
+  push:
+      branches:
+      - 'main'
+      paths-ignore:
+      - '**/*.md'
   workflow_dispatch:
 
 jobs:
