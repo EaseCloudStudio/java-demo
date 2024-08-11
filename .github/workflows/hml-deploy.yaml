@@ -1,0 +1,23 @@
+name: Deploy Java Application
+
+on:
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Run online Script
+        run: |
+            echo "Running online script"
+            echo "Deploying to Heroku"
+            echo "Deployed successfully"
+          
+  docker:
+    uses: EaseCloudStudio/java-demo.git/.github/workflows/buid_container.yaml@main
+    with:
+      aws-region: 'us-east-2'
+      image: 'java-demo'
+      tag: 'latest'
