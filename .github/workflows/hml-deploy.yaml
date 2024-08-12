@@ -21,6 +21,7 @@ jobs:
 
   docker:
     uses: EaseCloudStudio/java-workflow-actions/.github/workflows/buid_container.yaml@main
+    secrets: inherit
     with:
       aws-region: "us-east-2"
       image-name: "java-demo"
